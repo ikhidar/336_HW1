@@ -1,0 +1,160 @@
+/* css/style.css */
+:root {
+  --primary: #006b6b;
+  --accent: #ef7f6a;
+  --bg: #fbfdfd;
+  --card: #ffffff;
+  --text: #123f3f;
+  --maxw: 980px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+.wrapper {
+  max-width: var(--maxw);
+  margin: 24px auto;
+  padding: 18px;
+  display: flex;            
+  flex-direction: column;
+  gap: 16px;
+}
+
+.header {
+  display: flex;            
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 107, 107, 0.08),
+    rgba(239, 127, 106, 0.05)
+  );
+  border-radius: 10px;
+  box-shadow: 0 6px 14px rgba(18, 52, 59, 0.08);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.brand img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;      
+  border-radius: 6px;
+  border: 2px solid rgba(0, 0, 0, 0.05);
+}
+
+.brand h1 {
+  font-size: 1.1rem;
+  line-height: 1.1;
+}
+
+.byline {
+  font-size: 0.85rem;
+  color: #3f6f6f;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--primary);
+  font-weight: 600;
+  padding: 6px 10px;
+  border-radius: 8px;
+  transition: background 0.15s ease, transform 0.15s ease;
+}
+
+nav a:hover {
+  background-color: rgba(0, 107, 107, 0.1);
+  transform: translateY(-2px);
+}
+
+.content {
+  display: flex;            
+  gap: 16px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.card {
+  background-color: var(--card);
+  padding: 14px;
+  border-radius: 10px;
+  box-shadow: 0 8px 18px rgba(18, 52, 59, 0.06);
+  min-width: 280px;
+  flex: 1 1 480px;
+}
+
+h2 {
+  font-size: 1.05rem;
+  margin-bottom: 0.6rem;
+}
+
+p {
+  line-height: 1.5;
+  margin-bottom: 0.7rem;
+  color: #1a4f4f;
+}
+
+figure {
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+figure img {
+  max-width: 220px;
+  height: auto;
+  border-radius: 6px;
+}
+
+footer {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #3f6f6f;
+  padding: 8px;
+}
+
+a.source {
+  color: var(--primary);
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+@media (max-width: 740px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .content {
+    flex-direction: column;
+  }
+
+  .card {
+    flex: 1 1 auto;
+  }
+}
